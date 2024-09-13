@@ -37,7 +37,7 @@ client.dataArray = [];
 
 require("dotenv").config();
 
-
+const KeepAlive = require("./inicializacion_eventos/server.js");
 const Errores = require("./inicializacion_eventos/errores.js");
 const Eventos = require("./inicializacion_eventos/eventos.js");
 const Slash = require("./inicializacion_eventos/slashCommands.js");
@@ -46,9 +46,10 @@ const Distube = require("./inicializacion_eventos/distube.js");
 (async () => {
   await client.login(process.env.BOT_TOKEN).then(console.log(chalk.bold.magenta(`Se ha iniciado sesión correctamente`)));
   await Errores();
-  await Distube(client)
+  await Distube(client);
   await Slash(client);
   await Eventos(client);
+  await KeepAlive();
 })();
 
 client.on("ready", async () => {
