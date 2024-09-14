@@ -30,7 +30,7 @@ module.exports = {
     await message.react('👍');
     await message.react('👎');
 
-    return interaction.reply({
+    await interaction.reply({
       embeds: [new EmbedBuilder()
         .setDescription('Gracias por enviar la sugerencia.')
         .setColor("#864DE4")
