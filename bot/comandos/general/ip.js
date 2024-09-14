@@ -12,7 +12,7 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setColor("#864DE4")
       .setTitle('Información de la IP del Servidor')
-      .setDescription('¡Aquí está la IP del servidor! 🌐\n\nLa IP actual del servidor es: \`flowbox.com\`\n\n> Asegúrate de compartirla con tus amigos para que también puedan unirse.')
+      .setDescription('¡Aquí está la IP del servidor! 🌐\n\nLa IP actual del servidor es: \`survicroft.fun\`\n\n> Asegúrate de compartirla con tus amigos para que también puedan unirse.')
 
     return interaction.reply({
       embeds: [embed],
