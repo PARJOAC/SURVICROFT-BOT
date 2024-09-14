@@ -12,7 +12,7 @@ module.exports = {
   execute: async (interaction, client) => {
 try {
   
-   const result = await mcs.statusJava("flowbox.fun", 25565, { query: true });
+   const result = await mcs.statusJava("survicroft.fun", 25565, { query: true });
     
     let estado;
     if(result.online === true) {
@@ -22,11 +22,11 @@ try {
     };
     
           const embed = new EmbedBuilder()
-          .setTitle(`Información de FlowBox`)
+          .setTitle(`Información de SurviCroft`)
           .setColor("#864DE4")
-          .setAuthor({ name: 'FlowBox | Network', iconURL: client.user.displayAvatarURL(), url: 'https://flowbox.tebex.io/'})
-          .setDescription(`> ¡Espero que te diviertas en el servidor y pases un buen rato!\n\n**Estado:** ${estado}\n**Usuarios Actuales:** ${result.players.online}/${result.players.max}\n**Ip:** flowbox.fun\n**Puerto:** ${result.port}\n**Versión:** ${result.version.name_clean}\n`)
-    .setImage("https://api.mcstatus.io/v2/widget/java/flowbox.fun")
+          .setAuthor({ name: 'SurviCroft | Network', iconURL: client.user.displayAvatarURL(), url: 'https://flowbox.tebex.io/'})
+          .setDescription(`> ¡Espero que te diviertas en el servidor y pases un buen rato!\n\n**Estado:** ${estado}\n**Usuarios Actuales:** ${result.players.online}/${result.players.max}\n**Ip:** survicroft.fun\n**Puerto:** ${result.port}\n**Versión:** ${result.version.name_clean}\n`)
+    .setImage("https://api.mcstatus.io/v2/widget/java/survicroft.fun")
     
           return interaction.reply({ embeds: [embed], ephemeral: false })
   
