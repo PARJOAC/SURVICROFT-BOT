@@ -25,7 +25,6 @@ function createButtonsEmoji(botones) {
 module.exports = {
   botones_ayuda: () => createButtonsEmoji([
     { id: "GENERAL", emoji: "🌎", style: ButtonStyle.Secondary },
-    { id: "MOD", emoji: "🔧", style: ButtonStyle.Secondary },
-    { id: "MUSICA", emoji: "🎶", style: ButtonStyle.Secondary },
+    { id: "MOD", emoji: "🔧", style: ButtonStyle.Secondary }
   ]),
 }
