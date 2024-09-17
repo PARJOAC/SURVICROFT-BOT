@@ -44,7 +44,7 @@ const Slash = require("./inicializacion_eventos/slashCommands.js");
 
 (async () => {
   await client.login(process.env.BOT_TOKEN).then(console.log(chalk.bold.magenta(`Se ha iniciado sesión correctamente`)));
-  await Errores();
+  //await Errores();
   await Slash(client);
   await Eventos(client);
   await KeepAlive();
