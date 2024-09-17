@@ -13,13 +13,12 @@ module.exports = {
 
     const commandsByCategory = {
       general: client.slash.filter((cmd) => cmd.category === "general"),
-      mod: client.slash.filter((cmd) => cmd.category === "mod"),
-      musica: client.slash.filter((cmd) => cmd.category === "musica")
+      mod: client.slash.filter((cmd) => cmd.category === "mod")
     };
 
     const indexEmbed = new EmbedBuilder()
       .setTitle("Menú de Inicio")
-      .setDescription("🌎 = **GENERAL**\n🔧 = **MODS**\n🎶 = **MUSICA**")
+      .setDescription("🌎 = **GENERAL**\n🔧 = **MODS**")
       .setColor("#864DE4")
     .setFooter({ text: 'SurviCroft Network', iconURL: client.user.displayAvatarURL() })
 
@@ -34,18 +33,12 @@ module.exports = {
       .setDescription(commandsByCategory.mod.map(withAliases).join("\n") || "No hay comandos.")
       .setColor("#864DE4")
       .setFooter({ text: 'SurviCroft Network', iconURL: client.user.displayAvatarURL() })
-
-    const MUSICA = new EmbedBuilder()
-      .setTitle("Comandos de ayuda Música")
-      .setDescription(commandsByCategory.musica.map(withAliases).join("\n") || "No hay comandos.")
-      .setColor("#864DE4")
-      .setFooter({ text: 'SurviCroft Network', iconURL: client.user.displayAvatarURL() })
+    
     const m = await interaction.reply({ embeds: [indexEmbed], components: [boton.botones_ayuda()], ephemeral: false });
 
     const buttonEmbedMap = {
       GENERAL: GENERAL,
-      MOD: MOD,
-      MUSICA: MUSICA
+      MOD: MOD
     };
 
     const filter = (buttonMessage) => buttonMessage.clicker.id === interaction.user.id;
