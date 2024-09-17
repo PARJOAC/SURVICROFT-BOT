@@ -15,7 +15,7 @@ module.exports = async (client) => {
     }
   }
 
-  const folders = ["general", "mod", "musica"];
+  const folders = ["general", "mod"];
   for (const folder of folders) {
     await subFolder(folder);
   }
